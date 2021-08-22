@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chat-ROOM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://use.fontawesome.com/0215b1de82.js"></script>
+</head>
+
+<body>
+    <main>
+        <section class="main_section glass">
+            <section class="entry">
+                <div class="chat-head">
+                    <strong>Chat-ROOM</strong>
+                </div>
+                <div class='user-box'>
+                    <div class="user_inp_div">
+                        <input type="text" class="form__input" placeholder=" ">
+                        <label for="" class="form__label">USERNAME</label>
+                    </div>
+                    <div class="join_room_div">
+                        <span>
+                            <span>Rooms</span>
+                            <select class="select_room" id="avl_rooms"></select>
+                            <button id='join_btn'>Join</button>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="create_room_btn">
+                            Create room?
+                        </span>
+                    </div>
+                </div>
+            </section>
+            <section class="chat">
+                <section class="chat_details_section">
+                    <section class="chat_details">
+                        <div class="chat_user_div">
+                            <span><i class="fa fa-user" aria-hidden="true"></i>
+                                <strong id="chat_user"></strong>
+                            </span>
+                            <button>Leave Room</button>
+                        </div>
+                        <div class="chat_room_div">
+                            <div id="current_room_name"></div>
+                            <div class="room_users"></div>
+                        </div>
+                    </section>
+                </section>
+                <section class="chat_area">
+                    <div class="chat_area_rel">
+                        <section class="messages">
+                            <section class="msg_row">
+                                <!-- <div class="msg_box bot_msg">
+                                    <div class="msg_content">
+                                        <strong id="msg_name">Hari</strong>
+                                        <p class="msg_text">Welcome to public chat room,</p>
+                                    </div>
+                                    <div class="msg_time">
+                                        <span>14:24</span>
+                                    </div>
+                                </div> -->
+                            </section>
+                        </section>
+                        <div class="text_box">
+                            <input type="text" placeholder="Type your message" class="user_text" id="user_text">
+                            <button type="submit" class="send" id='send'>send</button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+
+        <section class="new_room_sec">
+            <div class="new_room_div1">
+                <div class="user_inp_div">
+                    <input type="text" class="form__input" placeholder=" " id="new_room_inp" minlength="5">
+                    <label for="" class="form__label">ROOM NAME</label>
+                </div>
+                <div class="user_inp_div">
+                    <input type="number" class="form__input" placeholder=" ">
+                    <label for="" class="form__label">PASSCODE</label>
+                </div>
+                <button id="create_btn">Create</button>
+            </div>
+        </section>
+        <section class="alert_msg">
+            <div id=alert_msg_div1>Alert
+            </div>
+        </section>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+</body>
+
+</html>
